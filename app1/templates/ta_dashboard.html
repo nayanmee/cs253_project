@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+    <p> hii</p>
+    <p> {{user.user.username}}</p>
+
+    <a href="/logout">logout</a>
+    {% for stu in arr  %}
+        hii
+        <a href= "{% url "app1:student" student_id=stu.number %}">{{stu.first_name}}</a><br>
+    {% endfor %}
+
+ 
+
+
+
+</body>
+</html>

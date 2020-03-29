@@ -43,3 +43,6 @@ class Pending_Requests(models.Model):
     username=models.CharField(max_length=100)
     email=models.EmailField(max_length=100,blank=True)
     password=models.CharField(max_length=100)
+    role = models.CharField(max_length=50,default = 'Ta')
+    def __str__(self):
+        return self.first_name

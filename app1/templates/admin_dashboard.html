@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ADMIN</title>
+</head>
+<body>
+<form action = 'Pending_Requests' method = 'post' > 
+        {% csrf_token %}  
+ <p> Pending requests </p>
+ 
+
+{% for r in request_manager  %}  
+    {{ r.first_name }} &emsp;
+     
+    
+    <label for="ACCEPT">ACCEPT</label>
+    <input type="radio" name= {{ r.username }} id="ACCEPT" value="ACCEPT">
+    <label for="REJECT">REJECT</label>
+    <input type="radio" name= {{ r.username }} id="REJECT" value="REJECT"><br>
+
+{% endfor %}  
+    <input type="hidden" id = 'id'   name="ROLE" value="Admin"> 
+    <input type="submit" value="Submit">
+<form>
+</br> <a href="/logout">logout</a>
+
+</body>
+</html>
