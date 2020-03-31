@@ -49,10 +49,13 @@ def register(request):
         password1 = request.POST['password1']
         password2 = request.POST['password2']
 
-        Admin = User.objects.create_user(username='Admin',password='a',email='admin@gmail.com',first_name='Admin',last_name='m')
-        Admin.save()
+
+       # Admin = User.objects.create_user(username='Admin',password='a',email='admin@gmail.com',first_name='Admin',last_name='m')
+       # Admin.save()
+       # user_dummy =User.objects.create_user(first_name = first_name,last_name=last_name,username=username,email=email,password = password1)
+       # user_dummy.save()
         Pending_Requests.objects.create(first_name = first_name,last_name=last_name,username=username,email=email,password = password1,role =role)
-        Admin_profile=Profile.objects.create(user = Admin,role='Admin')
+        #Admin_profile=Profile.objects.create(user = Admin,role='Admin')
         
         # pro.start_No=41
         # pro.end_No=44
